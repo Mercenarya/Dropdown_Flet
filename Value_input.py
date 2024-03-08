@@ -9,6 +9,8 @@ def main(page: ft.Page):
        elif CUSTOM_PRICE.value == "US Dollar":
            Value_Convert
        page.update()
+#this is my customize for Dropdown
+    
     CUSTOM_PRICE = ft.Dropdown(
        on_change=customize,
        options=[
@@ -18,6 +20,7 @@ def main(page: ft.Page):
        width=200,
       
    )
+#This is my Dropdown Menu 
     Dollar_value = 0.000040
     Value_update = ft.Text("0.0"+"$",size=40,color="lightGreen")
     Income_update = ft.Text("0.0"+"$", size=40, color="lightGreen")
@@ -38,7 +41,11 @@ def main(page: ft.Page):
        total_value_result.value = str(total_value)+"VND"
        Custom_price.value = f"{CUSTOM_PRICE.value}"
        page.update()
-            
+   #First and Second Value_convert for Select between VND and US Dollar after i have chosen one of them    
+
+
+
+
     def Close_dlg(e):
         Input_Form.open = False
         page.update()
